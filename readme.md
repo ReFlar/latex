@@ -1,5 +1,7 @@
 # flagrow/flarum-ext-latex
 
+[![Latest Stable Version](https://poser.pugx.org/flagrow/flarum-ext-latex/v/stable)][packagist-link] [![License](https://poser.pugx.org/flagrow/flarum-ext-latex/license)][packagist-link] [![Gitter](https://badges.gitter.im/flagrow/flarum-ext-latex.svg)](https://gitter.im/flagrow/flarum-ext-latex)
+
 A [Flarum](http://flarum.org) extension to render LaTeX expressions in your posts.
 
 ## Features
