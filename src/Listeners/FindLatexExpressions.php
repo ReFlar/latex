@@ -17,24 +17,23 @@ use Illuminate\Contracts\Events\Dispatcher;
 
 class FindLatexExpressions
 {
-
     /**
-    * Subscribes to the Flarum events.
-    *
-    * @param Dispatcher $events
-    */
+     * Subscribes to the Flarum events.
+     *
+     * @param Dispatcher $events
+     */
     public function subscribe(Dispatcher $events)
     {
         $events->listen(PostWillBeSaved::class, [$this, 'findExpressions']);
     }
 
     /**
-    * This function searches for LaTeX expressions, delimited by $ and $$.
-    * It then adds backticks (``) around the expression, so that is does not
-    * get modifed by Markdown or BBcode
-    *
-    * @param PostWillBeSaved $event
-    */
+     * This function searches for LaTeX expressions, delimited by $ and $$.
+     * It then adds backticks (``) around the expression, so that is does not
+     * get modifed by Markdown or BBcode.
+     *
+     * @param PostWillBeSaved $event
+     */
     public function findExpressions(PostWillBeSaved $event)
     {
         // get the text from the post, comment or answer
@@ -42,6 +41,6 @@ class FindLatexExpressions
         // this is the regular expresssion used. To check what it does use regex101.com
         $regex = '/(?<!\\\\)(?: ((?<!\\$)(?<!\\`)(?<!\\`\\n)\\${1,2}(?!\\n\\`)(?!\\`)(?!\\$)))(.*(?R)?.*)(?<!\\\\)(?: ((?<!\\$)(?<!\\`)(?<!\\`\\n)\\1(?!\\n\\`)(?!\\`)(?!\\$)))/mxU';
         // run the replace and edit the post content
-        $event->post->content =  preg_replace($regex, '`\\1\\2\\3`', $text);
+        $event->post->content = preg_replace($regex, '`\\1\\2\\3`', $text);
     }
 }
