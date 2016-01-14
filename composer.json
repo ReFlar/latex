@@ -26,13 +26,16 @@
         "flarum-extension": {
             "title": "LaTeX",
             "icon": {
-                "name": "upload",
-                "backgroundColor": "#000",
-                "color": "#123"
+                "image": "icon.png",
+                "backgroundSize": "contain",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center",
+                "backgroundColor": "#ddd",
+                "color": "#fff"
             }
         },
         "branch-alias": {
-            "dev-master": "0.1.x-dev"
+            "dev-master": "0.2.x-dev"
         }
     },
     "autoload": {

@@ -10,10 +10,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Flagrow\ImageUpload;
+namespace Flagrow\Latex;
 
 use Illuminate\Contracts\Events\Dispatcher;
 
 return function (Dispatcher $events) {
     $events->subscribe(Listeners\AddClientAssets::class);
+    $events->subscribe(Listeners\FindLatexExpressions::class);
 };
