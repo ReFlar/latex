@@ -1,16 +1,18 @@
 <?php
+
 /*
- * This file is part of flagrow/flarum-ext-latex.
+ * This file is part of reflar/latex.
  *
- * Copyright (c) Flagrow.
+ * Copyright (c) 2018 ReFlar.
+ * Copyright (c) 2016 Flagrow.
  *
- * http://flagrow.github.io
+ * https://reflar.redevs.org
  *
  * For the full copyright and license information, please view the license.md
  * file that was distributed with this source code.
  */
 
-namespace Flagrow\Latex;
+namespace Reflar\Latex;
 
 use Illuminate\Contracts\Events\Dispatcher;
 

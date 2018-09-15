@@ -45,7 +45,7 @@ If you want to actually **show** the LaTeX code, you must use Markdown in the fo
 ## Links
 
 - by [Flagrow](https://github.com/flagrow)
-- [changelog](changelog.md)
-- [license](license.md)
+- [changelog](CHANGELOG.md)
+- [license](LICENSE)
 
 [packagist-link]: https://packagist.org/packages/flagrow/flarum-ext-latex

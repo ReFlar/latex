@@ -1,5 +1,5 @@
 {
-    "name": "flagrow/flarum-ext-latex",
+    "name": "reflar/latex",
     "description": "Renders LaTeX expressions.",
     "keywords": ["latex", "flarum", "flagrow", "math", "expressions", "tex"],
     "type": "flarum-extension",
@@ -13,34 +13,33 @@
             "name": "Daniël Klabbers",
             "email": "daniel+flarum@klabbers.email",
             "homepage": "http://hyn.io"
+        },
+        {
+            "name": "David Sevilla Martín",
+            "email": "david.s@redevs.org",
+            "homepage": "https://redevs.org"
         }
     ],
     "support": {
-        "issues": "https://github.com/flagrow/flarum-ext-latex/issues",
-        "source": "https://github.com/flagrow/flarum-ext"
+        "issues": "https://github.com/reflar/latex/issues",
+        "source": "https://github.com/reflar/latex"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.5"
+        "flarum/core": "^0.1.0-beta.7"
     },
     "extra": {
         "flarum-extension": {
-            "title": "LaTeX",
+            "title": "ReFlar LaTeX",
             "icon": {
-                "image": "icon.png",
-                "backgroundSize": "contain",
-                "backgroundRepeat": "no-repeat",
-                "backgroundPosition": "center",
-                "backgroundColor": "#ddd",
+                "name": "superscript",
+                "backgroundColor": "#263238",
                 "color": "#fff"
             }
-        },
-        "branch-alias": {
-            "dev-master": "0.2.x-dev"
         }
     },
     "autoload": {
         "psr-4": {
-            "Flagrow\\Latex\\": "src/"
+            "Reflar\\Latex\\": "src/"
         }
     }
 }
