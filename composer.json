@@ -35,6 +35,9 @@
                 "backgroundColor": "#263238",
                 "color": "#fff"
             }
+        },
+        "flagrow": {
+          "discuss": "https://discuss.flarum.org/d/16176-latex-by-reflar"
         }
     },
     "autoload": {
