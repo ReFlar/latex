@@ -14,7 +14,7 @@
 
 namespace Reflar\Latex\Listeners;
 
-use Flarum\Event\PostWillBeSaved;
+use Flarum\Post\Event\Saving;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
 
@@ -27,7 +27,7 @@ class FindLatexExpressions
      */
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(PostWillBeSaved::class, [$this, 'findExpressions']);
+        $events->listen(Saving::class, [$this, 'findExpressions']);
     }
 
     /**
@@ -35,9 +35,9 @@ class FindLatexExpressions
      * It then adds backticks (``) around the expression, so that is does not
      * get modifed by Markdown or BBcode.
      *
-     * @param PostWillBeSaved $event
+     * @param Saving $event
      */
-    public function findExpressions(PostWillBeSaved $event)
+    public function findExpressions(Saving $event)
     {
         if (app(SettingsRepositoryInterface::class)->get('reflar-latex.prevent_formatting')) {
             // get the text from the post, comment or answer
